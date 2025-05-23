@@ -40,7 +40,7 @@ def print_spiciest_foods(spicy_foods):
 
 def get_average_heat_level(spicy_foods):
     average = 0
-@@ -43,4 +44,6 @@
+
 
 def create_spicy_food(spicy_foods, spicy_food):
     newlist = spicy_foods + [spicy_food]

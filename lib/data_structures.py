@@ -17,34 +17,35 @@ spicy_foods = [
 ]
 
 def get_names(spicy_foods):
-    names = [spicy_foods[i]["name"] for i in range(len(spicy_foods))]
-    return names
+    pass
+    return [food["name"] for food in spicy_foods]
 
 def get_spiciest_foods(spicy_foods):
-    spiciest = [spicy_foods[i] for i in range(len(spicy_foods)) if spicy_foods[i]["heat_level"] > 5]
-    return spiciest
+    pass
+    return [food for food in spicy_foods if food["heat_level"] > 5]
 
 def print_spicy_foods(spicy_foods):
-    [print(f"{spicy_foods[i]["name"]} ({spicy_foods[i]["cuisine"]}) | Heat Level: {'🌶' * spicy_foods[i]["heat_level"]}") for i in range(len(spicy_foods))]
-    for i in range(len(spicy_foods)):
-        print(f"{spicy_foods[i]['name']} ({spicy_foods[i]['cuisine']}) | Heat Level: {'🌶' * spicy_foods[i]['heat_level']}")
+    pass
+    for food in spicy_foods:
+        print(f"{food['name']} ({food['cuisine']}) | Heat Level: {'🌶' * food['heat_level']}")
 
 def get_spicy_food_by_cuisine(spicy_foods, cuisine):
-    for i in range(len(spicy_foods)): 
-        if spicy_foods[i]["cuisine"] == cuisine:
-            return spicy_foods[i]
+    pass
+    for food in spicy_foods:
+        if food["cuisine"] == cuisine:
+            return food
 
 def print_spiciest_foods(spicy_foods):
-    [print(f"{spicy_foods[i]["name"]} ({spicy_foods[i]["cuisine"]}) | Heat Level: {'🌶' * spicy_foods[i]["heat_level"]}") for i in range(len(spicy_foods)) if spicy_foods[i]["heat_level"] > 5]
-    [print(f"{spicy_foods[i]['name']} ({spicy_foods[i]['cuisine']}) | Heat Level: {'🌶' * spicy_foods[i]['heat_level']}") for i in range(len(spicy_foods)) if spicy_foods[i]['heat_level'] > 5]
+    pass
+    spiciest = get_spiciest_foods(spicy_foods)
+    print_spicy_foods(spiciest)
 
 def get_average_heat_level(spicy_foods):
-    average = 0
-
+    pass
+    total_heat = sum([food["heat_level"] for food in spicy_foods])
+    return total_heat // len(spicy_foods)
 
 def create_spicy_food(spicy_foods, spicy_food):
-    newlist = spicy_foods + [spicy_food]
-    return newlist
-    return newlist
-
-print_spicy_foods(spicy_foods=spicy_foods)
+    pass
+    spicy_foods.append(spicy_food)
+    return spicy_foods
